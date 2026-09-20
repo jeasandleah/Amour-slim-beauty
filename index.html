@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Amour Slim Beauty - slimming treatments with free coaching and support in Gloucestershire.">
+  <title>Amour Slim Beauty | Gloucestershire</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#top">Amour Slim Beauty</a>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Enquire</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">GLoucestershire • BEAUTY & WELLNESS</p>
+        <h1>Feel confident.<br><span>Feel amazing.</span></h1>
+        <p class="hero-text">
+          Personalised slimming treatments with free coaching and support,
+          designed to help you feel supported throughout your journey.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#contact">Request a quote</a>
+          <a class="button button-outline" href="#services">View treatment</a>
+        </div>
+      </div>
+      <div class="hero-logo">
+        <img src="logo.jpeg" alt="Amour Slim Beauty logo">
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="section-heading">
+        <p class="eyebrow">OUR TREATMENT</p>
+        <h2>Simple. Personal. Supportive.</h2>
+      </div>
+
+      <article class="service-card">
+        <div>
+          <p class="service-label">FEATURED TREATMENT</p>
+          <h3>Slimming Treatments</h3>
+          <p>
+            A personalised slimming treatment with <strong>free coaching and support</strong>
+            included to help you stay informed, motivated and supported.
+          </p>
+          <ul>
+            <li>Personalised support</li>
+            <li>Free coaching</li>
+            <li>Ongoing guidance</li>
+          </ul>
+        </div>
+        <div class="price">
+          <span>From</span>
+          <strong>£90</strong>
+        </div>
+      </article>
+    </section>
+
+    <section class="support-section" id="about">
+      <div>
+        <p class="eyebrow">WHY AMOUR SLIM BEAUTY</p>
+        <h2>Support that goes beyond the treatment.</h2>
+      </div>
+      <p>
+        At Amour Slim Beauty, the aim is to make your experience feel personal,
+        welcoming and supported. Every slimming treatment includes free coaching
+        and support, so you don't have to feel like you're doing it alone.
+      </p>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="section-heading">
+        <p class="eyebrow">GET IN TOUCH</p>
+        <h2>Ready to start your journey?</h2>
+        <p>Send an enquiry for a quote or order. Add your email address below when you're ready to launch.</p>
+      </div>
+
+      <form class="enquiry-form" onsubmit="showMessage(event)">
+        <div class="form-grid">
+          <label>
+            Your name
+            <input type="text" name="name" required placeholder="Your name">
+          </label>
+          <label>
+            Phone number
+            <input type="tel" name="phone" placeholder="Your phone number">
+          </label>
+        </div>
+
+        <label>
+          What would you like to enquire about?
+          <select name="enquiry">
+            <option>Slimming treatment - £90</option>
+            <option>Request a quote</option>
+            <option>Place an order</option>
+            <option>General enquiry</option>
+          </select>
+        </label>
+
+        <label>
+          Message
+          <textarea name="message" rows="5" placeholder="Tell us what you'd like help with..."></textarea>
+        </label>
+
+        <button class="button button-primary" type="submit">Send enquiry</button>
+        <p id="form-message" class="form-message" hidden>
+          Your form is ready, but an email address has not been connected yet.
+          Once you create your business email, add it to the form settings.
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <strong>Amour Slim Beauty</strong>
+      <span>Gloucestershire</span>
+    </div>
+    <p>© <span id="year"></span> Amour Slim Beauty. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function showMessage(event) {
+      event.preventDefault();
+      const message = document.getElementById("form-message");
+      message.hidden = false;
+    }
+  </script>
+</body>
+</html>
